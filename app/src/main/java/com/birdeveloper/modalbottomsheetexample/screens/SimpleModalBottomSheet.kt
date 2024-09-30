@@ -27,7 +27,7 @@ import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun SimpleModalBottomSheet() {
+fun SimpleModalBottomSheet(innerPadding: androidx.compose.foundation.layout.PaddingValues) {
     val sheetState = rememberModalBottomSheetState()
     val coroutineScope = rememberCoroutineScope()
     var showBottomSheet by remember { mutableStateOf(false) }
@@ -39,7 +39,8 @@ fun SimpleModalBottomSheet() {
                 icon = { Icon(Icons.Filled.Add, contentDescription = null) },
                 onClick = { showBottomSheet = true }
             )
-        }
+        },
+        modifier = Modifier.padding(innerPadding),
     ) { contentPadding ->
         // Main screen content
         Column(

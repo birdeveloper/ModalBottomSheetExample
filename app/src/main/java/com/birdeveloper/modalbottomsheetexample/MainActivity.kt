@@ -5,13 +5,14 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.birdeveloper.modalbottomsheetexample.screens.CustomScrimColorBottomSheet
 import com.birdeveloper.modalbottomsheetexample.screens.PartialBottomSheet
+import com.birdeveloper.modalbottomsheetexample.screens.RoundedCornerBottomSheet
 import com.birdeveloper.modalbottomsheetexample.screens.SimpleModalBottomSheet
 import com.birdeveloper.modalbottomsheetexample.ui.theme.ModalBottomSheetExampleTheme
 
@@ -22,7 +23,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             ModalBottomSheetExampleTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    PartialBottomSheet(innerPadding)
+                    RoundedCornerBottomSheet(innerPadding)
                 }
             }
         }
